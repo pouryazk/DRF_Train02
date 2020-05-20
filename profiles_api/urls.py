@@ -10,6 +10,7 @@ router.register('profile', views.UserProfileViewSet) # // is not needed
  django Automatically assigns it from model name """
 
 urlpatterns = [
-    path('hello-view/',views.HelloApiView.as_view()),                     
+    path('hello-view/',views.HelloApiView.as_view()),
+    path('login/', views.UserLoginApiView.as_view()),
     path('',include(router.urls))
 ]
