@@ -1,8 +1,10 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from . import views
-
 router = DefaultRouter()
+
+
+router.register('feed', views.UserProfileFeedViewSet)
 router.register('hello-viewset', views.HelloViewSet, base_name = 'hello-viewset') # // is not needed
 router.register('profile', views.UserProfileViewSet) # // is not needed
 
